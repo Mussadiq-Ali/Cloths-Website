@@ -1,0 +1,100 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background: linear-gradient(to bottom, #ffe1f0, #fff);
+  padding: 50px 20px;
+  color: #333;
+  width: 100%;
+  border-top: 2px solid #f8c8dc;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo p {
+  color: #222;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.footer-links {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #5a5a5a;
+}
+
+.footer-links li {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-links li:hover {
+  color: #ff4081;
+}
+
+/* Social Icons Container */
+.footer-social-icon {
+  display: flex;
+  gap: 15px;
+}
+
+/* Common Styling for All Icons */
+.footer-icons-container {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #ff80ab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer-icons-container img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Specific Fix for Facebook Icon */
+.fb-icon img {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.footer-icons-container:hover {
+  transform: scale(1.1);
+  background: #ff80ab;
+}
+
+/* Footer Copyright */
+.footer-copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #444;
+}
+
+.footer-copyright hr {
+  width: 80%;
+  border: none;
+  border-radius: 10px;
+  height: 3px;
+  background: #ffb3c6;
+}

@@ -10,9 +10,7 @@ const Hero = () => {
       <div className="hero-left">
         <h2>Experience An Iconic Luxury Brand</h2>
         <div>
-          <div className="hero-hand-icon">
-            <p>Upgrade Your Look </p>
-          </div>
+          <p>Upgrade Your Look </p>
           <p> with Our New</p>
           <p> Collection</p>
         </div>
