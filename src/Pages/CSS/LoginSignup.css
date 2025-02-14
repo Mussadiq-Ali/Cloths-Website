@@ -1,0 +1,109 @@
+.loginsignup {
+  width: 100%;
+  height: 80vh;
+  background: #fce3fe;
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginsignup-container {
+  width: 580px;
+  height: 600px;
+  background: white;
+  margin: auto;
+  padding: 40px 60px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.loginsignup-container h1 {
+  margin: 20px 0px;
+  text-align: center;
+}
+
+.loginsignup-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+  margin-top: 30px;
+}
+
+.loginsignup-fields input {
+  height: 72px;
+  width: 100%;
+  padding-left: 20px;
+  border: 1px solid #c9c9c9;
+  outline: none;
+  color: #5c5c5c;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.loginsignup-container button {
+  width: 100%;
+  height: 72px;
+  color: white;
+  background: #ff4141;
+  margin-top: 30px;
+  border: none;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.loginsignup-login {
+  margin-top: 20px;
+  color: #5c5c5c;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.loginsignup-login span {
+  color: #ff4141;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.loginsignup-agree {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  gap: 10px;
+  color: #5c5c5c;
+  font-size: 16px;
+  font-weight: 500;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Responsive for iPhone 12 Pro (390px width) */
+@media (max-width: 420px) {
+  .loginsignup-container {
+    width: 90%;
+    padding: 30px;
+    height: auto;
+  }
+
+  .loginsignup-fields input {
+    height: 60px;
+    font-size: 16px;
+  }
+
+  .loginsignup-container button {
+    height: 60px;
+    font-size: 20px;
+  }
+
+  .loginsignup-login {
+    font-size: 16px;
+  }
+
+  .loginsignup-agree {
+    flex-direction: column;
+    font-size: 14px;
+  }
+}

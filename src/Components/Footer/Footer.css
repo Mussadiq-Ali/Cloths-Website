@@ -8,9 +8,14 @@
   padding: 50px 20px;
   color: #333;
   width: 100%;
+  max-width: 100vw;
   border-top: 2px solid #f8c8dc;
+  overflow: hidden;
+  box-sizing: border-box;
+  text-align: center;
 }
 
+/* Logo Section */
 .footer-logo {
   display: flex;
   align-items: center;
@@ -24,13 +29,17 @@
   letter-spacing: 1px;
 }
 
+/* Footer Links */
 .footer-links {
   display: flex;
+  flex-direction: row; /* Default: Horizontal */
+  justify-content: center;
   list-style: none;
   gap: 35px;
   font-size: 18px;
   font-weight: 500;
   color: #5a5a5a;
+  padding: 0;
 }
 
 .footer-links li {
@@ -42,13 +51,13 @@
   color: #ff4081;
 }
 
-/* Social Icons Container */
+/* Social Icons */
 .footer-social-icon {
   display: flex;
+  justify-content: center;
   gap: 15px;
 }
 
-/* Common Styling for All Icons */
 .footer-icons-container {
   width: 40px;
   height: 40px;
@@ -59,7 +68,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
 }
 
 .footer-icons-container img {
@@ -68,25 +77,19 @@
   object-fit: contain;
 }
 
-/* Specific Fix for Facebook Icon */
-.fb-icon img {
-  width: 20px !important;
-  height: 20px !important;
-}
-
 .footer-icons-container:hover {
   transform: scale(1.1);
   background: #ff80ab;
 }
 
-/* Footer Copyright */
+/* Copyright */
 .footer-copyright {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  justify-content: center;
+  gap: 10px;
   width: 100%;
-  margin-top: 20px;
   font-size: 16px;
   color: #444;
 }
@@ -97,4 +100,48 @@
   border-radius: 10px;
   height: 3px;
   background: #ffb3c6;
+}
+
+/* Mobile Responsive (iPhone 12 Pro & Other Small Screens) */
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 10px;
+    gap: 20px;
+  }
+
+  .footer-logo p {
+    font-size: 24px;
+  }
+
+  /* Footer links vertical on small screens */
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    gap: 8px;
+  }
+
+  .footer-social-icon {
+    gap: 10px;
+  }
+
+  .footer-icons-container {
+    width: 35px;
+    height: 35px;
+    padding: 6px;
+  }
+
+  .footer-icons-container img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .footer-copyright {
+    font-size: 14px;
+  }
+
+  .footer-copyright hr {
+    width: 90%;
+  }
 }

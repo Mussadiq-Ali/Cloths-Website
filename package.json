@@ -2,7 +2,7 @@
   "name": "emart",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Mussadiq-Ali.github.io/E-commerce",
+  "homepage": "https://mussadiq-ali.github.io/Cloths-Website/",
   "dependencies": {
     "@testing-library/react": "^16.2.0",
     "cra-template": "1.2.0",

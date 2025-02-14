@@ -4,12 +4,21 @@
   align-items: center;
   padding: 10px 50px;
   box-shadow: 0 1px 3px -2px black;
+  position: relative;
+  flex-wrap: wrap;
 }
 
 .nav-logo {
   display: flex;
   align-items: center;
   gap: 5px;
+}
+.nav-logo p {
+  font-size: 26px; /* Size ko thoda bara kar diya */
+  font-weight: bold;
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .nav-menu {
@@ -43,7 +52,9 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  position: relative;
 }
+
 .nav-login-cart button {
   width: 120px;
   height: 40px;
@@ -69,86 +80,95 @@
   background: #f3f3f3;
 }
 
+.nav-cart {
+  position: relative;
+}
+
 .nav-cart-count {
   width: 18px;
   height: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -28px;
-  margin-left: -38px;
-  border-radius: 9px;
+  border-radius: 50%;
   font-size: 12px;
   background: red;
   color: white;
+  position: absolute;
+  top: -8px;
+  right: -10px;
 }
 
-.nav-logo p {
-  font-size: 28px;
-  font-weight: 600;
-  background: linear-gradient(to right, #ff7eb3, #ff758c);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-  opacity: 0.9;
+/* ✅ Men, Women, Kids Section */
+.nav-categories {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 16px;
+  margin-top: 10px;
 }
 
-/* Responsive styles for smaller screens */
-@media (max-width: 1024px) {
-  .nav-menu {
-    gap: 20px;
-    font-size: 14px;
-  }
-
-  .nav-login-cart {
-    gap: 10px;
-  }
+.nav-categories a {
+  text-decoration: none;
+  color: #626262;
+  font-weight: 500;
+  position: relative;
 }
 
+.nav-categories a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background: #ff4141;
+  border-radius: 10px;
+}
+
+/* ✅ Mobile Responsive */
 @media (max-width: 768px) {
   .navbar {
     padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .nav-menu {
-    display: none;
-  }
-
-  .nav-login-cart {
-    gap: 15px;
-  }
-
-  .nav-logo p {
-    font-size: 24px;
-  }
-}
-
-@media (max-width: 480px) {
-  .navbar {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .nav-logo {
-    margin-bottom: 15px;
-  }
-
-  .nav-login-cart {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .nav-menu {
-    display: block;
+    display: flex !important;
+    flex-direction: row; /* ✅ Horizontal hi rahega */
+    justify-content: center; /* ✅ Centered hoga */
     width: 100%;
-    text-align: center;
-    gap: 10px;
-    margin-top: 15px;
+    background: none;
+    box-shadow: none;
+    padding: 0;
   }
 
   .nav-menu li {
-    display: inline-block;
-    padding: 5px 10px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .nav-login-cart {
+    position: absolute;
+    right: 20px; /* ✅ Hamesha right side pe rahega */
+    top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-login-cart button {
+    width: 100px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .nav-cart-count {
+    top: -5px;
+    right: -7px;
   }
 }
